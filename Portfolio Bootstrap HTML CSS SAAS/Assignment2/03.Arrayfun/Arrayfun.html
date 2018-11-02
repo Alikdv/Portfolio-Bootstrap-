@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    table, th ,td{
+    border: 1px solid black;
+}
+body{
+    background-color: antiquewhite;
+}
+#form,footer{
+    text-align:center; 
+}
+</style>
+
+
+<body>
+
+    <table style="width:30%">
+        <tr>
+            <th>Input</th>
+            <th>Sorted_number*************</th>
+            <th>Integerr_greater_than_40**</th>
+            <th>Multiply_and_substr*******</th>
+            <th>Sum***********************</th>
+        </tr>
+        <tr>
+            <td><INPUT id="in" TYPE="TEXT" NAME="words" ></td>
+            <td>
+                <p id="out1"></p>
+            </td>
+            <td>
+                <p id="out2"></p>
+            </td>
+            <td>
+                <p id="out3"></p>
+            </td>
+            <td>
+                <p id="out4"></p>
+            </td>
+    </table>
+    <input type="submit" value="Submit" onclick="input()">
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <script>
+        function numdescending(a,b){
+return b-a;
+        }
+
+        function greatThan(num){
+            return num<40;
+        }
+        function input() {
+            var result,in0, in1, in2, in3;
+            in1 = document.getElementById("in").value;
+
+            in0 = in1.split(",");
+ //Sorted_number*************	           
+result= in0.sort(numdescending);
+document.getElementById("out1").innerHTML = result;
+
+//Integerr_greater_than_40** show less than 40 num
+in2=result.filter(greatThan);
+document.getElementById("out2").innerHTML = in2;
+
+	
+in3 = multSubstract(in2)
+document.getElementById("out3").innerHTML = in3;
+
+let in4 = sumArray(in3)
+document.getElementById("out4").innerHTML = in4;
+        }
+
+function multSubstract(origArray){
+    var newArr = [];
+    for (var i = 0; i < origArray.length; i++) {
+    newArr[i] = ((parseFloat(origArray[i]) * 3.5)-2);  
+   }
+   return newArr;
+}
+//Sum***********************
+function sumArray(origArray){
+var element = 0;
+for (let i = 0; i < origArray.length; i++) {
+     element += parseFloat(origArray[i]);
+    } 
+return element;
+}
+
+    </script>
+    
+    <p id="demo"></p>
+    <footer>
+        <div id="footer">
+            <a textalign='center' href="../index.html" target="_top">
+                Back to Main
+            </a>
+        </div>
+    </footer>
+</body>
+
+</html>

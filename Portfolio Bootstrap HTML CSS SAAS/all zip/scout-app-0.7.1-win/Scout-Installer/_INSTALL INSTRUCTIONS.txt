@@ -1,0 +1,18 @@
+1. Run "Air-Java7.exe"
+2. Run "Scout.exe" once and then close it.
+3. Run the following command, replace PATH_TO_SCOUT with the actual folder:
+
+msiexec /i "PATH_TO_SCOUT\setup.msi" TARGETDIR="C:\Program Files\Scout" /qb
+
+You can now delete the "Scout-Installer" folder.
+
+
+
+-----------------------------------------------------------------------------------
+
+
+If that doesn't work, here are alternative instructions.
+
+1. Run "Air-Java7.exe"
+2. Run "Scout.exe" once and then close it.
+3. Run "setup.msi" and wait about 15 seconds, you'll see an icon on your desktop
